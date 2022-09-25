@@ -1,0 +1,73 @@
+﻿<Window x:Class="Emulator_Intel8086_v._0._1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Emulator_Intel8086_v._0._1"
+        mc:Ignorable="d"
+        Title="Emulator" Height="500" Width="250" ResizeMode="NoResize">
+    <Grid Background="Aquamarine">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <TextBlock TextWrapping="Wrap" Text="al" Margin="15,10,0,0" Height="22" Width="30"/>
+            <TextBlock TextWrapping="Wrap" Text="ah" Margin="15,3,0,0" Height="22" Width="30"/>
+            <TextBlock TextWrapping="Wrap" Text="bl" Margin="15,3,0,0" Height="22" Width="30"/>
+            <TextBlock TextWrapping="Wrap" Text="bh" Margin="15,3,0,0" Height="22" Width="30"/>
+            <TextBlock TextWrapping="Wrap" Text="cl" Margin="15,3,0,0" Height="22" Width="30"/>
+            <TextBlock TextWrapping="Wrap" Text="ch" Margin="15,3,0,0" Height="22" Width="30"/>
+            <TextBlock TextWrapping="Wrap" Text="dl" Margin="15,3,0,0" Height="22" Width="30"/>
+            <TextBlock TextWrapping="Wrap" Text="dh" Margin="15,3,0,0" Height="22" Width="30"/>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1"  Width="70" HorizontalAlignment="Left">
+            <TextBox x:Name="alValue" Margin="0,3,0,0" Height="22"/>
+            <TextBox x:Name="ahValue" Margin="0,1.5,0,0" Height="22"/>
+            <TextBox x:Name="blValue" Margin="0,2,0,0" Height="22"/>
+            <TextBox x:Name="bhValue" Margin="0,2,0,0" Height="22"/>
+            <TextBox x:Name="clValue" Margin="0,3.5,0,0" Height="22"/>
+            <TextBox x:Name="chValue" Margin="0,2,0,0" Height="22"/>
+            <TextBox x:Name="dlValue" Margin="0,3.5,0,0" Height="22"/>
+            <TextBox x:Name="dhValue" Margin="0,4,0,0" Height="22"/>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="2">
+            <Button x:Name="addValue" Margin="20,50,20,0" Content="Add" Click="addValue_Click"/>
+            <Button x:Name="Refresh" Margin="20,20,20,0" Content="Refresh" Click="Refresh_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan ="2"  Background="Azure">
+            <TextBlock Margin="10,10,10,0" HorizontalAlignment="Center" Text="From" FontFamily="Times New Roman" FontSize="14" FontWeight="Bold" Foreground="DarkBlue"/>
+            <RadioButton GroupName="from" x:Name="alFrom" Content="al" Margin="20,5,0,0"/>
+            <RadioButton GroupName="from" x:Name="ahFrom" Content="ah" Margin="20,3,0,0"/>
+            <RadioButton GroupName="from" x:Name="blFrom" Content="bl" Margin="20,3,0,0"/>
+            <RadioButton GroupName="from" x:Name="bhFrom" Content="bh" Margin="20,3,0,0"/>
+            <RadioButton GroupName="from" x:Name="clFrom" Content="cl" Margin="20,3,0,0"/>
+            <RadioButton GroupName="from" x:Name="chFrom" Content="ch" Margin="20,3,0,0"/>
+            <RadioButton GroupName="from" x:Name="dlFrom" Content="dl" Margin="20,3,0,0"/>
+            <RadioButton GroupName="from" x:Name="dhFrom" Content="dh" Margin="20,3,0,0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" Background="Gray">
+            <TextBlock Margin="10,10,10,0" HorizontalAlignment="Center" Text="To" FontFamily="Times New Roman" FontSize="14" FontWeight="Bold" Foreground="DarkBlue"/>
+            <RadioButton GroupName="to" x:Name="alTo" Content="al" Margin="20,5,0,0"/>
+            <RadioButton GroupName="to" x:Name="ahTo" Content="ah" Margin="20,3,0,0"/>
+            <RadioButton GroupName="to" x:Name="blTo" Content="bl" Margin="20,3,0,0"/>
+            <RadioButton GroupName="to" x:Name="bhTo" Content="bh" Margin="20,3,0,0"/>
+            <RadioButton GroupName="to" x:Name="clTo" Content="cl" Margin="20,3,0,0"/>
+            <RadioButton GroupName="to" x:Name="chTo" Content="ch" Margin="20,3,0,0"/>
+            <RadioButton GroupName="to" x:Name="dlTo" Content="dl" Margin="20,3,0,0"/>
+            <RadioButton GroupName="to" x:Name="dhTo" Content="dh" Margin="20,3,0,0"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" Grid.Row="2" >
+            <Button x:Name="mov" Margin="35,5,0,0" Content="MOV" Click="mov_Click" materialDesign:BottomDashedLineAdorner.Brush="Aqua" Cursor="Hand"></Button>
+            <Button x:Name="XCHG" Margin="40,5,50,0" Content="XCHG" Click="XCHG_Click"></Button>
+        </StackPanel>
+
+    </Grid>
+</Window>
