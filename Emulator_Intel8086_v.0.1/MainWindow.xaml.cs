@@ -23,27 +23,48 @@ namespace Emulator_Intel8086_v._0._1
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string al = "";
-        public static string ah = "";
-        public static string bl = "";
-        public static string bh = "";
-        public static string cl = "";
-        public static string ch = "";
-        public static string dl = "";
-        public static string dh = "";
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();                 
+        }
+        public static string choosenReg1 = "";
+        public static string choosenReg2 = "";
+
+        public static Dictionary<string, string> regs = new Dictionary<string, string>() {
+                { "al", ""},
+                { "ah", ""},
+                { "bl", ""},
+                { "bh", ""},
+                { "cl", ""},
+                { "ch", ""},
+                { "dl", ""},
+                { "dh", ""}
+        };
+
+        public void Render()
+        {
+            alValue.Text = regs["al"];
+            ahValue.Text = regs["ah"];
+            blValue.Text = regs["bl"];
+            bhValue.Text = regs["bh"];
+            clValue.Text = regs["cl"];
+            chValue.Text = regs["ch"];
+            dlValue.Text = regs["dl"];
+            dhValue.Text = regs["dh"];
         }
 
         private void mov_Click(object sender, RoutedEventArgs e)
-        {
-            
+        {                   
+                regs[choosenReg2] = regs[choosenReg1];
+                Render();                         
         }
 
         private void XCHG_Click(object sender, RoutedEventArgs e)
         {
-           
+            string temp = regs[choosenReg1];
+            regs[choosenReg1] = regs[choosenReg2];
+            regs[choosenReg2] = temp;
+            Render();
         }
 
         private void Refresh_Click(object sender, RoutedEventArgs e)
@@ -81,23 +102,24 @@ namespace Emulator_Intel8086_v._0._1
                     dlValue.IsReadOnly = true;
                     dhValue.IsReadOnly = true;
 
-                    al = alValue.Text.ToLower();
-                    ah = ahValue.Text.ToLower();
-                    bl = blValue.Text.ToLower();
-                    bh = bhValue.Text.ToLower();
-                    cl = clValue.Text.ToLower();
-                    ch = chValue.Text.ToLower();
-                    dl = dlValue.Text.ToLower();
-                    dh = dhValue.Text.ToLower();
+                    regs["al"] = alValue.Text.ToLower();
+                    regs["ah"] = ahValue.Text.ToLower();
+                    regs["bl"] = blValue.Text.ToLower();
+                    regs["bh"] = bhValue.Text.ToLower();
+                    regs["cl"] = clValue.Text.ToLower();
+                    regs["ch"] = chValue.Text.ToLower();
+                    regs["dl"] = dlValue.Text.ToLower();
+                    regs["dh"] = dhValue.Text.ToLower();
 
-                    alValue.Text = al;
-                    ahValue.Text = ah;
-                    blValue.Text = bl;
-                    bhValue.Text = bh;
-                    clValue.Text = cl;
-                    chValue.Text = ch;
-                    dlValue.Text = dl;
-                    dhValue.Text = dh;
+                    alValue.Text = regs["al"];
+                    ahValue.Text = regs["ah"];
+                    blValue.Text = regs["bl"];
+                    bhValue.Text = regs["bh"];
+                    clValue.Text = regs["cl"];
+                    chValue.Text = regs["ch"];
+                    dlValue.Text = regs["dl"];
+                    dhValue.Text = regs["dh"];
+
 
 
 
@@ -108,7 +130,7 @@ namespace Emulator_Intel8086_v._0._1
             }
             else
                 MessageBox.Show("Some inputs are empty or incorrect");
-            
+
         }
         public bool Cheker(string x)
         {
@@ -128,11 +150,14 @@ namespace Emulator_Intel8086_v._0._1
                 return true;
 
         }
-        public string MOV(string a, string b)
+        private void checked_event(object sender, RoutedEventArgs e)
         {
-            b = a;
-            return b;
+            choosenReg1 = (sender as RadioButton)?.Content.ToString();
+        }
+
+        private void checked_event2(object sender, RoutedEventArgs e)
+        {
+            choosenReg2 = (sender as RadioButton)?.Content.ToString();
         }
     }
-    
 }

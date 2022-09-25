@@ -44,25 +44,25 @@
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan ="2"  Background="Azure">
             <TextBlock Margin="10,10,10,0" HorizontalAlignment="Center" Text="From" FontFamily="Times New Roman" FontSize="14" FontWeight="Bold" Foreground="DarkBlue"/>
-            <RadioButton GroupName="from" x:Name="alFrom" Content="al" Margin="20,5,0,0"/>
-            <RadioButton GroupName="from" x:Name="ahFrom" Content="ah" Margin="20,3,0,0"/>
-            <RadioButton GroupName="from" x:Name="blFrom" Content="bl" Margin="20,3,0,0"/>
-            <RadioButton GroupName="from" x:Name="bhFrom" Content="bh" Margin="20,3,0,0"/>
-            <RadioButton GroupName="from" x:Name="clFrom" Content="cl" Margin="20,3,0,0"/>
-            <RadioButton GroupName="from" x:Name="chFrom" Content="ch" Margin="20,3,0,0"/>
-            <RadioButton GroupName="from" x:Name="dlFrom" Content="dl" Margin="20,3,0,0"/>
-            <RadioButton GroupName="from" x:Name="dhFrom" Content="dh" Margin="20,3,0,0"/>
+            <RadioButton GroupName="from" x:Name="alFrom" Content="al" Margin="20,5,0,0" Checked="checked_event" IsChecked="True"/>
+            <RadioButton GroupName="from" x:Name="ahFrom" Content="ah" Margin="20,3,0,0" Checked="checked_event"/>
+            <RadioButton GroupName="from" x:Name="blFrom" Content="bl" Margin="20,3,0,0" Checked="checked_event"/>
+            <RadioButton GroupName="from" x:Name="bhFrom" Content="bh" Margin="20,3,0,0" Checked="checked_event"/>
+            <RadioButton GroupName="from" x:Name="clFrom" Content="cl" Margin="20,3,0,0" Checked="checked_event"/>
+            <RadioButton GroupName="from" x:Name="chFrom" Content="ch" Margin="20,3,0,0" Checked="checked_event"/>
+            <RadioButton GroupName="from" x:Name="dlFrom" Content="dl" Margin="20,3,0,0" Checked="checked_event"/>
+            <RadioButton GroupName="from" x:Name="dhFrom" Content="dh" Margin="20,3,0,0" Checked="checked_event"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="2" Background="Gray">
             <TextBlock Margin="10,10,10,0" HorizontalAlignment="Center" Text="To" FontFamily="Times New Roman" FontSize="14" FontWeight="Bold" Foreground="DarkBlue"/>
-            <RadioButton GroupName="to" x:Name="alTo" Content="al" Margin="20,5,0,0"/>
-            <RadioButton GroupName="to" x:Name="ahTo" Content="ah" Margin="20,3,0,0"/>
-            <RadioButton GroupName="to" x:Name="blTo" Content="bl" Margin="20,3,0,0"/>
-            <RadioButton GroupName="to" x:Name="bhTo" Content="bh" Margin="20,3,0,0"/>
-            <RadioButton GroupName="to" x:Name="clTo" Content="cl" Margin="20,3,0,0"/>
-            <RadioButton GroupName="to" x:Name="chTo" Content="ch" Margin="20,3,0,0"/>
-            <RadioButton GroupName="to" x:Name="dlTo" Content="dl" Margin="20,3,0,0"/>
-            <RadioButton GroupName="to" x:Name="dhTo" Content="dh" Margin="20,3,0,0"/>
+            <RadioButton GroupName="to" x:Name="alTo" Content="al" Margin="20,5,0,0" Checked="checked_event2" IsChecked="True"/>
+            <RadioButton GroupName="to" x:Name="ahTo" Content="ah" Margin="20,3,0,0" Checked="checked_event2"/>
+            <RadioButton GroupName="to" x:Name="blTo" Content="bl" Margin="20,3,0,0" Checked="checked_event2"/>
+            <RadioButton GroupName="to" x:Name="bhTo" Content="bh" Margin="20,3,0,0" Checked="checked_event2"/>
+            <RadioButton GroupName="to" x:Name="clTo" Content="cl" Margin="20,3,0,0" Checked="checked_event2"/>
+            <RadioButton GroupName="to" x:Name="chTo" Content="ch" Margin="20,3,0,0" Checked="checked_event2"/>
+            <RadioButton GroupName="to" x:Name="dlTo" Content="dl" Margin="20,3,0,0" Checked="checked_event2"/>
+            <RadioButton GroupName="to" x:Name="dhTo" Content="dh" Margin="20,3,0,0" Checked="checked_event2"/>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" Grid.Row="2" >
             <Button x:Name="mov" Margin="35,5,0,0" Content="MOV" Click="mov_Click" materialDesign:BottomDashedLineAdorner.Brush="Aqua" Cursor="Hand"></Button>
