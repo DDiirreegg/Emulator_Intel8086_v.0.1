@@ -39,10 +39,10 @@
             <TextBox x:Name="dhValue" Margin="0,4,0,0" Height="22"/>
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="2">
-            <Button x:Name="addValue" Margin="20,50,20,0" Content="Add" Click="addValue_Click"/>
-            <Button x:Name="Refresh" Margin="20,20,20,0" Content="Refresh" Click="Refresh_Click"/>
+            <Button x:Name="addValue" Margin="20,50,20,0" Content="Add" Click="addValue_Click" Background="DimGray"/>
+            <Button x:Name="Refresh" Margin="20,20,20,0" Content="Refresh" Click="Refresh_Click" Background="DimGray"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan ="2"  Background="Azure">
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan ="2"  Background="Aquamarine">
             <TextBlock Margin="10,10,10,0" HorizontalAlignment="Center" Text="From" FontFamily="Times New Roman" FontSize="14" FontWeight="Bold" Foreground="DarkBlue"/>
             <RadioButton GroupName="from" x:Name="alFrom" Content="al" Margin="20,5,0,0" Checked="checked_event" IsChecked="True"/>
             <RadioButton GroupName="from" x:Name="ahFrom" Content="ah" Margin="20,3,0,0" Checked="checked_event"/>
@@ -53,7 +53,7 @@
             <RadioButton GroupName="from" x:Name="dlFrom" Content="dl" Margin="20,3,0,0" Checked="checked_event"/>
             <RadioButton GroupName="from" x:Name="dhFrom" Content="dh" Margin="20,3,0,0" Checked="checked_event"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="2" Background="Gray">
+        <StackPanel Grid.Row="1" Grid.Column="2" Background="Aquamarine">
             <TextBlock Margin="10,10,10,0" HorizontalAlignment="Center" Text="To" FontFamily="Times New Roman" FontSize="14" FontWeight="Bold" Foreground="DarkBlue"/>
             <RadioButton GroupName="to" x:Name="alTo" Content="al" Margin="20,5,0,0" Checked="checked_event2" IsChecked="True"/>
             <RadioButton GroupName="to" x:Name="ahTo" Content="ah" Margin="20,3,0,0" Checked="checked_event2"/>
@@ -65,8 +65,8 @@
             <RadioButton GroupName="to" x:Name="dhTo" Content="dh" Margin="20,3,0,0" Checked="checked_event2"/>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" Grid.Row="2" >
-            <Button x:Name="mov" Margin="35,5,0,0" Content="MOV" Click="mov_Click" materialDesign:BottomDashedLineAdorner.Brush="Aqua" Cursor="Hand"></Button>
-            <Button x:Name="XCHG" Margin="40,5,50,0" Content="XCHG" Click="XCHG_Click"></Button>
+            <Button x:Name="mov" Margin="35,5,0,0" Content="MOV" Click="mov_Click" Background="DimGray"></Button>
+            <Button x:Name="XCHG" Margin="40,5,50,0" Content="XCHG" Click="XCHG_Click" Background="DimGray"></Button>
         </StackPanel>
 
     </Grid>

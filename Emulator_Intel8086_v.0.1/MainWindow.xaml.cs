@@ -77,6 +77,7 @@ namespace Emulator_Intel8086_v._0._1
             chValue.Clear();
             dlValue.Clear();
             dhValue.Clear();
+
             alValue.IsReadOnly = false;
             ahValue.IsReadOnly = false;
             blValue.IsReadOnly = false;
@@ -85,6 +86,9 @@ namespace Emulator_Intel8086_v._0._1
             chValue.IsReadOnly = false;
             dlValue.IsReadOnly = false;
             dhValue.IsReadOnly = false;
+
+            alFrom.IsChecked = true;
+            alTo.IsChecked = true;
         }
 
         private void addValue_Click(object sender, RoutedEventArgs e)
@@ -119,9 +123,6 @@ namespace Emulator_Intel8086_v._0._1
                     chValue.Text = regs["ch"];
                     dlValue.Text = regs["dl"];
                     dhValue.Text = regs["dh"];
-
-
-
 
                     MessageBox.Show("Success");
                 }
